@@ -1,8 +1,9 @@
+import BodyTop from "@/components/BodyTop";
 
 export default function Home() {
   return (
-    <main>
-      lets build takealot
-    </main>
+    <div>
+      <BodyTop/>
+    </div>
   )
 }

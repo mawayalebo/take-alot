@@ -1,4 +1,3 @@
-'use client'
 
 import Link from "next/link"
 import Image from "next/image"
@@ -6,7 +5,7 @@ import { ChevronDownIcon, HeartIcon, ShoppingCartIcon, Bars3Icon, MagnifyingGlas
 
 function Header() {
   return (
-    <div className="bg-white w-full p-4 shadow-sm">
+    <div className="bg-white w-full px-4 py-2 shadow-sm">
         {/* mobile */}
         <div className="flex items-center justify-between md:hidden">
             <div>
