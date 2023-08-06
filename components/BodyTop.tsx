@@ -26,7 +26,7 @@ async function BodyTop() {
                     </div>
                     <div className="absolute flex flex-col bg-white shadow-md w-full">
 
-                        <div className="flex flex-col ">
+                        <div className="flex flex-col py-2">
                             {
                                 departments.map((data: Departments, index: any)=> (
                                     <div key={index} className="group flex items-center px-2 py-[2px] cursor-pointer  hover:bg-[#0b79bf] hover:text-white">

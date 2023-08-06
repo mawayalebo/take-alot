@@ -55,10 +55,10 @@ function Header() {
                     </div>
                     <div className="flex space-x-2 items-center">
                         <div className=" bg-red-400 p-2 rounded-full hover:cursor-pointer hover:bg-red-500 transition duration-700 ease-in-out">
-                            <HeartIcon className=" text-white h-6" />
+                            <HeartIcon className=" text-white h-4" />
                         </div>
-                        <div className="bg-green-800 rounded-full flex space-x-3 items-center p-2 px-4">
-                            <ShoppingCartIcon className="text-white h-6"/>
+                        <div className="bg-green-700 rounded-full flex space-x-3 items-center p-2 px-2">
+                            <ShoppingCartIcon className="text-white h-4"/>
                             <span className="font-bold text-white text-sm">0</span>
                         </div>
                     </div>
