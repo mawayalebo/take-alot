@@ -17,7 +17,7 @@ async function BodyTop() {
     const { data: thirdpartyData } = await getThirdparty();
   return (
     <div className="bg-blue-600 w-full">
-        <div className="max-w-6xl  mx-auto grid grid-cols-10 pt-2 space-x-4">
+        <div className="max-w-6xl  mx-auto grid grid-cols-10 pt-2 px-4 space-x-4">
             <div className="hidden lg:inline-grid lg:col-span-2">
             <div className="relative"> 
                     <div className="bg-gray-700 p-2 rounded-t-md flex items-center justify-between">
@@ -47,11 +47,11 @@ async function BodyTop() {
                     
                 </div>
             </div>
-            <div className="col-span-8">
-                <div className="flex items-center space-x-2">
-                    <Bars3Icon className="hidden text-white h-6 cursor-pointer" />
+            <div className="hidden md:col-span-10 md:inline-grid lg:col-span-8 lg:inline-grid">
+                <div className="flex items-center">
+                    <Bars3Icon className="hidden md:inline-flex lg:hidden text-white h-6 cursor-pointer pr-4" />
                     <div className="flex flex-grow items-center">
-                        <input className="flex-grow px-2 py-1 text-sm rounded-l-md" type="search" placeholder="Search for products, brands" />
+                        <input role="search" className="flex-grow px-2 py-1 text-sm rounded-l-md !border-0 !ring-0 !outline-none ring-inset-0" type="search" placeholder="Search for products, brands..." />
                         <div className="bg-slate-700 rounded-r-md py-1 px-4 cursor-pointer">
                             <MagnifyingGlassIcon className="h-6 text-white"/>
                         </div>
@@ -59,7 +59,7 @@ async function BodyTop() {
                 </div>
 
 
-                <div className="p-2">
+                <div className="py-2">
                     <ul className="flex items-center overflow-x-hidden rounded-md ">
                         {
                             thirdpartyData.map((thirdparty: any, index: any)=>{
