@@ -7,7 +7,7 @@ export async function GET() {
             bgColour: "bg-indigo-600",
             hoverColour: "hover:bg-indigo-700",
             textColour: "text-white",
-            borderXColour: "border-x-indigo-700",
+            borderXColour: "border-x-transparent",
         },
         {
             name: "Shop Christmas",

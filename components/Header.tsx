@@ -40,7 +40,7 @@ function Header() {
                         
                         <span>My Account</span> <ChevronDownIcon className="text-black h-4 group-hover:rotate-180"/>
                         
-                        <div className="hidden group-hover:inline absolute bg-white shdow-sm top-12 right-60 w-40 shadow-md p-4">
+                        <div className="hidden group-hover:inline absolute bg-white shdow-sm top-10 right-48 w-40 shadow-md z-20 p-4">
                             <ul className="text-black flex flex-col space-y-2">
                                 <li className="text-sm hover:text-blue-600 hover:underline cursor-pointer">My Account</li>
                                 <li className="text-sm hover:text-blue-600 hover:underline cursor-pointer">Track Order</li>
