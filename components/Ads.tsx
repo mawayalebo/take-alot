@@ -17,7 +17,7 @@ const Ads: FC<AdProps> = ({ ads, fromTo }) => {
         ads && ads.slice(fromTo.start, fromTo.end).map((ad, index)=>{
           return(
             <div key={index} className=" p-2 bg-white shadow-sm">
-              <img src={ad.adURL} alt={"advert no"+ KeyboardEvent.toString} />
+              <img src={ad.adURL} alt={"advert no"+ index.toString} />
             </div>
           )
         })
