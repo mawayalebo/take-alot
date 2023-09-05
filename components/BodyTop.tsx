@@ -30,7 +30,7 @@ async function BodyTop() {
                 <Ads  
                   fromTo={{
                     start: 2,
-                    end: ads.length
+                    end: 3
                   }}  
                   ads={ads}
                 />
