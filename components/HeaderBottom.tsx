@@ -7,17 +7,31 @@ async function getDepartments(){
     return res.json();
 }
 
-async function getThirdparty(){
-    const res = await fetch('http://localhost:3000/api/thirdparty',{ cache: 'no-cache'});
-    return res.json();
+async function getNavModules() {
+    try {
+      const res = await fetch('http://localhost:3000/api/navmodules', { cache: 'no-cache' });
+      if (!res.ok) {
+        throw new Error(`HTTP Error: ${res.status}`);
+      }
+      
+      const data = await res.json(); // Parse the response body as JSON
+      console.log("nav modules", data);
+      
+      return data;
+    } catch (error) {
+      console.error('Error fetching nav modules:', error);
+      return [];
+    }
 }
+  
 
 async function HeaderBottom() {
     const { data: departments } = await getDepartments();
-    const { data: thirdpartyData } = await getThirdparty();
+    const { navModules } = await getNavModules();
+    console.log(navModules);
   return (
     <div className="bg-blue-600 w-full">
-        <div className="max-w-6xl  mx-auto grid grid-cols-10 pt-2 px-4 space-x-4">
+        <div className="max-w-7xl  mx-auto grid grid-cols-10 pt-2 px-4 space-x-4">
             <div className="hidden lg:inline-grid lg:col-span-2">
             <div className="relative"> 
                     <div className="bg-gray-700 p-2 rounded-t-md flex items-center justify-between">
@@ -59,18 +73,23 @@ async function HeaderBottom() {
                 </div>
 
 
-                <div className="py-2">
-                    <ul className="flex items-center overflow-x-hidden rounded-md ">
+                <div className="my-2 rounded-md">
+                    <ul className="flex items-center justify-center w-full overflow-x-hidden rounded-md scrollbar-hide">
                         {
-                            thirdpartyData.map((thirdparty: any, index: any)=>{
+                            navModules.map((navModule: any, index: any)=>{
                                 return(
                                     <li 
-                                        key={index} 
-                                        className={`px-2 py-1 ${thirdparty.bgColour} ${thirdparty.textColour}  ${thirdparty.hoverColour} text-sm cursor-pointer flex-1 whitespace-nowrap text-center border-x border-x-[1]  ${thirdparty.borderXColour}` }
+                                        key={index}  
+                                        id={navModule.id} 
+                                        className="w-full flex-1 text-center px-4"
                                     >
-                                        <Link  href="#"  >
-                                            {thirdparty.name}
+                                        <div dangerouslySetInnerHTML={{ __html: navModule.styleElement }} />
+                                        <Link href={navModule.href}  
+                                            className={`text-xs cursor-pointer whitespace-nowrap flex-1 text-center` }
+                                        >
+                                            {navModule.title}
                                         </Link>
+                                        
                                     </li>
                                 )
                             })

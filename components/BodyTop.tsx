@@ -19,7 +19,7 @@ async function BodyTop() {
 
   return (
     <div>
-        <div className="grid grid-cols-10 mx-auto max-w-6xl space-x-4">
+        <div className="grid grid-cols-10 mx-auto max-w-7xl space-x-4">
             <div className="hidden lg:inline-grid lg:col-span-2"></div>
             <div className="hidden md:col-span-10 lg:col-span-5 md:flex flex-col pb-4">
                 <Banner/>
