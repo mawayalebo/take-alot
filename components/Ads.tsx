@@ -12,12 +12,12 @@ interface AdProps {
 
 const Ads: FC<AdProps> = ({ ads, fromTo }) => {
   return (
-    <div className="flex flex-col gap-4 y-2">
+    <div className="flex flex-col gap-4">
       {
         ads && ads.slice(fromTo.start, fromTo.end).map((ad, index)=>{
           return(
-            <div key={index} className=" p-2 bg-white shadow-md">
-              <img src={ad.adURL} alt={"advert no"+ index.toString} />
+            <div key={index} className="p-2 flex justify-center bg-white shadow-md">
+              <img src={ad.adURL} alt={"advert no"+ index.toString} className="object-cover"/>
             </div>
           )
         })
