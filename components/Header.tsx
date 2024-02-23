@@ -22,7 +22,7 @@ function Header() {
 
 
         {/* medium & large */}
-        <div className="hidden md:flex items-center space-x-6 px-4 max-w-7xl mx-auto">
+        <div className="hidden md:flex items-center space-x-6 px-4  py-2 max-w-7xl mx-auto">
             <Link href="/" className="cursor-pointer">
                 <Image src={"./logo.svg"} alt={"logo"} width={180} height={37.28}/>
             </Link>

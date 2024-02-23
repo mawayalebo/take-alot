@@ -30,7 +30,7 @@ async function HeaderBottom() {
     const { navModules } = await getNavModules();
     console.log(navModules);
   return (
-    <div className="bg-blue-600 w-full">
+    <div className="bg-[#0b79bf] w-full">
         <div className="max-w-7xl  mx-auto grid grid-cols-10 pt-2 px-4 space-x-4">
             <div className="hidden lg:inline-grid lg:col-span-2">
             <div className="relative"> 
@@ -81,7 +81,7 @@ async function HeaderBottom() {
                                     <li 
                                         key={index}  
                                         id={navModule.id} 
-                                        className="w-full flex-1 text-center px-4"
+                                        className={`"w-full flex-1 text-center px-4 py-1 " ${index > 0 ? 'border-x-[#ccc] border-x-[1px]' : ''}`}
                                     >
                                         <div dangerouslySetInnerHTML={{ __html: navModule.styleElement }} />
                                         <Link href={navModule.href}  
