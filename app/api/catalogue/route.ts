@@ -69,7 +69,7 @@ async function scrapeTakealotCatalog(startIndex: number, endIndex: number): Prom
   }
 }
 
-// Example usage:
+
 
 
 
