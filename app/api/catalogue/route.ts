@@ -70,7 +70,7 @@ async function scrapeTakealotCatalog(startIndex: number, endIndex: number): Prom
           const productTitle = productElement.querySelector('.card-section a h4.product-title').innerText;
           return productTitle;
         });
-        startIndex += 9
+        startIndex += 10
         endIndex += 9
         return {
           title,
